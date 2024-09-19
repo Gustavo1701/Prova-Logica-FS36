@@ -1,6 +1,6 @@
 function Sair (){
     if (localStorage.getItem("token") == null) {
-        alert("Você precisa estar logado para acessar essa página");
+        alert("Você precisa estar logado para acessar essa página!");
         window.location.href = "./html/login.html";
       }
       
@@ -14,4 +14,4 @@ function Sair (){
         localStorage.removeItem("userLogado");
         window.location.href = "./html/login.html";
       }
-    }
+}
