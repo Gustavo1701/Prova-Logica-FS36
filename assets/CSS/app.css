@@ -77,29 +77,6 @@ h1{
   color: #4038a0
 }
 
-button{
-  background-color: transparent;
-  border-color: #272262;
-  color: #272262;
-  padding: 7px;
-  font-weight: bold;
-  font-size: 12pt;
-  margin-top: 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  outline: none;
-  transition: all .4s ease-out;
-}
-
-button:hover{
-  background-color: #272262;
-  color: #fff;
-}
-
-.justify-center{
-  display: flex;
-  justify-content: center;
-}
 
 
 hr{
@@ -112,17 +89,6 @@ p{
   color: #272262;
   font-size: 14pt;
   text-align: center;
-}
-
-a{
-  color: #7a3077;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all .3s ease-out;
-}
-
-a:hover{
-  color: #272262;
 }
 
 .fa-eye{

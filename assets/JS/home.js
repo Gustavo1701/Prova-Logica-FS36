@@ -1,3 +1,22 @@
+// autenticação de usuario para acessar a pagina home
+window.onload = function () {
+    const token = localStorage.getItem("token");
+
+
+    if (!token) {
+        alert("Você precisa estar logado para acessar esta página!");
+        window.location.href = "./login.html";
+    } else {
+        const userLogado = JSON.parse(localStorage.getItem("userLogado"));
+        const logado = document.querySelector("#logado");
+        logado.innerHTML = `Olá ${userLogado.nome}`;
+    }
+};
+
+const tbody = document.getElementById('tbody');
+
+
+// array usuarios cadastrados
 const usuarios = [
     { id: 1, nome: "Ana Silva", email: "ana.silva@example.com", idade: 28, telefone: "1234-5678", cidade: "São Paulo" },
     { id: 2, nome: "Carlos Oliveira", email: "carlos.oliveira@example.com", idade: 34, telefone: "2345-6789", cidade: "Rio de Janeiro" },
@@ -31,6 +50,10 @@ const usuarios = [
     { id: 30, nome: "Alan Pereira", email: "alan.pereira@example.com", idade: 35, telefone: "0123-4567", cidade: "Santos" }
 ];
 
+
+
+
+// inicio funções do campo de cadastrar novo usuario
 function cadastrarUsuario() {
     const nome = document.getElementById('nome').value
     const idade = document.getElementById('idade').value
@@ -38,27 +61,42 @@ function cadastrarUsuario() {
     const email = document.getElementById('email').value
     const cidade = document.getElementById('cidade').value
 
-    usuarios.push({nome, idade, tel, email, cidade})
-    
+    usuarios.push({ nome, idade, tel, email, cidade })
+
+    LimparCamposCadastro()
+
 }
 
-const tbody = document.getElementById('tbody');
+function LimparCamposCadastro() {
+    document.getElementById('nome').value = ''
+    document.getElementById('idade').value = ''
+    document.getElementById('tel').value = ''
+    document.getElementById('email').value = ''
+    document.getElementById('cidade').value = ''
 
+}
+
+
+
+
+
+
+// Exibir e filtrar usuarios na tabela
 function filtrarUsuarios(input) {
-    return usuarios.filter(usuario => 
-        usuario.nome.toLowerCase().includes(input.toLowerCase()) || 
+    return usuarios.filter(usuario =>
+        usuario.nome.toLowerCase().includes(input.toLowerCase()) ||
         usuario.email.toLowerCase().includes(input.toLowerCase()) ||
         usuario.cidade.toLowerCase().includes(input.toLowerCase()) ||
         usuario.telefone.toLowerCase().includes(input.toLowerCase()) ||
-        usuario.idade.toString().includes(input) 
+        usuario.idade.toString().includes(input)
     );
 }
 
 function exibirLista() {
-    tbody.innerHTML = ""; 
+    tbody.innerHTML = "";
     usuarios.forEach(user => {
-        tbody.innerHTML += 
-        `<tr>
+        tbody.innerHTML +=
+            `<tr>
             <td>${user.nome}</td>
             <td>${user.idade}</td>
             <td>${user.telefone}</td>
@@ -69,21 +107,21 @@ function exibirLista() {
 }
 
 function limparLista() {
-    tbody.innerHTML = ''; 
-    document.getElementById("inputBuscar").value = ""; 
+    tbody.innerHTML = '';
+    document.getElementById("inputBuscar").value = "";
 }
 
 function atualizarListaFiltrada() {
     const input = document.getElementById("inputBuscar").value;
     const usuariosFiltrados = filtrarUsuarios(input);
 
-    
+
     tbody.innerHTML = "";
 
-    
+
     usuariosFiltrados.forEach(usuario => {
-        tbody.innerHTML += 
-        `<tr>
+        tbody.innerHTML +=
+            `<tr>
             <td>${usuario.nome}</td>
             <td>${usuario.idade}</td>
             <td>${usuario.telefone}</td>
