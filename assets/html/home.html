@@ -16,34 +16,33 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div class="container-fluid px-5">
-            <a class="navbar-brand" href="home.html">CRUD</a>
+            <a class="navbar-brand fs-4" href="home.html">CRUD</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div class=" text-white justify-content-center fs-5" id="logado"></div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="home.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Cadastro</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0)" onclick="sair()">Sair</a>
                     </li>
                 </ul>
-                
+
+
             </div>
-            <div class=" text-white fs-5" id="logado"></div>
-            
+
         </div>
     </nav>
     <h1 class="text-center pb-3">Tabela de Usuários</h1>
-    <div class="d-flex">
+    <div class="container-fluid d-flex">
         <input type="text" placeholder="Buscar aqui" id="inputBuscar" class="form-control w-25 m-2">
         <button class="btn btn-primary m-2" onclick="exibirLista()">Exibir Lista</button>
         <button class="btn btn-secondary m-2" onclick="limparLista()">Limpar Lista</button>
+        <button class="btn btn-outline-warning m-2" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Cadastro</button>
     </div>
 
 
@@ -88,18 +87,20 @@
         </div>
     </div>
     <!-- Tabela -->
-    <table class="table table-striped m-2">
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Idade</th>
-                <th>Telefone</th>
-                <th>Email</th>
-                <th>Cidade</th>
-            </tr>
-        </thead>
-        <tbody id="tbody"></tbody>
-    </table>
+    <div class="container-fluid table table-responsive-sm ">
+        <table class="table table-striped m-2">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th>Cidade</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </div>
     <!-- Footer -->
     <footer class="bg-secondary text-white text-center fixed-bottom">
         <h2>Todos os direitos reservados</h2>
