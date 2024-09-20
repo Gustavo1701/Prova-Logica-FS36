@@ -6,14 +6,6 @@
   font-family: 'Roboto', sans-serif;
 }
 
-body {
-  background: rgba(30, 81, 250, 0.938);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed
-  
-}
-
 .container {
   display: flex;
   justify-content: center;
