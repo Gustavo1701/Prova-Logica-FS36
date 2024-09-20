@@ -31,6 +31,17 @@ const usuarios = [
     { id: 30, nome: "Alan Pereira", email: "alan.pereira@example.com", idade: 35, telefone: "0123-4567", cidade: "Santos" }
 ];
 
+function cadastrarUsuario() {
+    const nome = document.getElementById('nome').value
+    const idade = document.getElementById('idade').value
+    const tel = document.getElementById('tel').value
+    const email = document.getElementById('email').value
+    const cidade = document.getElementById('cidade').value
+
+    usuarios.push({nome, idade, tel, email, cidade})
+    
+}
+
 const tbody = document.getElementById('tbody');
 
 function filtrarUsuarios(input) {
