@@ -7,10 +7,11 @@
 }
 
 body {
-  background: rgba(30, 81, 250, 0.938);
-  background-repeat: no-repeat;
+  /* background: rgba(30, 81, 250, 0.938); */
+  background-image: url('https://cdn.pixabay.com/photo/2023/10/25/19/25/blue-8341156_1280.jpg');
+  background-image: no-repeat;
   background-size: cover;
-  background-attachment: fixed
+  /* background-attachment: fixed; */
 
 }
 
