@@ -1,0 +1,65 @@
+body {
+    background-color: #171810; /* Cor de fundo */
+}
+
+#navIndex {
+    background-color: #171810;
+}
+
+#containerVoltar {
+    text-align: center; /* Centraliza o conteúdo */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+#containerCard {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha se não houver espaço */
+}
+
+.row {
+    width: 100%; /* Faz a linha ocupar toda a largura disponível */
+    display: flex; /* Ativa o Flexbox na linha */
+    justify-content: center; /* Centraliza os cards na linha */
+}
+
+.perfil-card {
+    border-radius: 10px; /* Bordas arredondadas */
+    border: none; /* Sem bordas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s; /* Transição suave ao passar o mouse */
+    height: 400px; /* Altura fixa do card */
+    width: 350px; /* Largura fixa do card */
+}
+
+.perfil-card:hover {
+    transform: scale(1.05); /* Aumenta o cartão ao passar o mouse */
+}
+
+.card-img-top {
+    height: 250px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Mantém a proporção da imagem */
+    border-top-left-radius: 10px; /* Bordas arredondadas na parte superior */
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    background-color: rgb(97, 92, 92); /* Cor de fundo do corpo do card */
+    flex: 1; /* Faz com que o corpo do card ocupe o espaço restante */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones sociais */
+    padding: 10px 0;
+}
+
+.social-icon {
+    width: 30px; /* Tamanho fixo para os ícones */
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    transition: transform 0.2s; /* Efeito de transição */
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Aumenta os ícones ao passar o mouse */
+}
