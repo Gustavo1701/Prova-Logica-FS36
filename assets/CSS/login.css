@@ -7,19 +7,29 @@
 }
 
 body {
-  /* background: rgba(30, 81, 250, 0.938); */
-  background-image: url('https://cdn.pixabay.com/photo/2023/10/25/19/25/blue-8341156_1280.jpg');
-  background-image: no-repeat;
-  background-size: cover;
-  /* background-attachment: fixed; */
-
+  background-image: url('../IMG/2.png');
+  background-size: 10%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #e603fa;
 }
 
-.container {
+#container{
   display: flex;
+  align-items: center;
   justify-content: center;
-  width: 100%;
-  margin-top: 100px;
+  width: 100vw;
+  height: 100vh;
+}
+
+#containerLogin{
+  align-items: center;
+ 
+  height: 500px;
+}
+
+#buttonLogin{
+  background-color: #e603fa;
 }
 
 .card {
@@ -79,9 +89,9 @@ h1{
 }
 
 button{
-  background-color: transparent;
-  border-color: #272262;
-  color: #272262;
+  background-color: #e603fa;
+  border-color: #e603fa;
+  color: #e603fa;
   padding: 7px;
   font-weight: bold;
   font-size: 12pt;
@@ -93,8 +103,8 @@ button{
 }
 
 button:hover{
-  background-color: #272262;
-  color: #fff;
+  background-color: #e603fa;
+  color: #e603fa;
 }
 
 .justify-center{
@@ -115,14 +125,13 @@ p{
 }
 
 a{
-  color: #7a3077;
   font-weight: bold;
   text-decoration: none;
   transition: all .3s ease-out;
 }
 
 a:hover{
-  color: #272262;
+  color: #e603fa;
 }
 
 .fa-eye{

@@ -11,38 +11,53 @@
 </head>
 
 <body>
-
-    <div class="container-fluid"></div>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-        <div class="container-fluid px-5">
-            <a class="navbar-brand fs-4" href="home.html">CRUD</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class=" text-white justify-content-center fs-5" id="logado"></div>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" onclick="sair()">Sair</a>
-                    </li>
-                </ul>
+    <nav id="navIndex" class="navbar navbar-expand-lg text-color">
+        <div class="container-fluid ">
 
+            <div id="divLogo">
+                <a class="navbar-brand" href="#">
+                    <img src="../IMG/1-removebg-preview.png" alt="logo" style="width: 100px; height: 85px;">
+                </a>
+            </div>
+
+            <div class=" text-white justify-content-center fs-5" id="logado">
+
+            </div>
+
+            <div id="divElementes" class="text-white">
+
+                <button class="navbar-toggler btn btn-light bg-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="contato.html">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="javascript:void(0)" onclick="sair()">Sair</a>
+                        </li>
+                    </ul>
+                </div>
 
             </div>
 
         </div>
     </nav>
+
+
+
     <h1 class="text-center pb-3">Tabela de Usuários</h1>
     <div class="container-fluid d-flex">
         <input type="text" placeholder="Buscar aqui" id="inputBuscar" class="form-control w-25 m-2">
         <button class="btn btn-primary m-2" onclick="exibirLista()">Exibir Lista</button>
         <button class="btn btn-secondary m-2" onclick="limparLista()">Limpar Lista</button>
-        <button class="btn btn-outline-warning m-2" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">Cadastro</button>
+        <button class="btn btn-outline-warning m-2" href="#" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">Cadastro</button>
     </div>
 
 
@@ -81,7 +96,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <button type="reset" class="btn btn-primary" onclick="cadastrarUsuario()">Salvar mudanças</button>
+                    <button type="reset" class="btn btn-primary" onclick="cadastrarUsuario()">Salvar
+                        mudanças</button>
                 </div>
             </div>
         </div>
@@ -102,10 +118,13 @@
         </table>
     </div>
     <!-- Footer -->
-    <footer class="bg-secondary text-white text-center fixed-bottom">
-        <h2>Todos os direitos reservados</h2>
+    <footer id="footerHome" class="text-white text-center fixed-bottom">
+        Todos os direitos reservados
+        <br> Site desenvolvido e criado por <span><a class="text-white" href="https://github.com/breno-oliveira98"
+                target="_blank">Breno Oliveira</a></span> e <span><a class="text-white"
+                href="https://github.com/Gustavo1701" target="_blank">Gustavo Santos</a></span>
     </footer>
-    </div>
+
     <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

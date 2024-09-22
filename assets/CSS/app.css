@@ -6,12 +6,32 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.container {
+#navIndex {
+  background-color: #171810;
+
+}
+
+#mainIndex{
+  background-color: #3e4131;
+  width: 100vw;
+  height: 100vh;
+
+  color: #272262;
+  font-size: 14pt;
+  align-items: center;
+  text-align: center;
+}
+
+#buttonIniciar{
+  background-color: #e603fa;
+}
+
+/* .container {
   display: flex;
   justify-content: center;
   width: 100%;
   margin-top: 100px;
-}
+} */
 
 .card {
   background-color: #ffffff80;
@@ -52,24 +72,6 @@ h1{
   border-bottom: 2px solid #4038a0;
 }
 
-.label-float label{
-  color: #272262;
-  /* pointer-event: none; */
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-top: 13px;
-  transition: all .3s ease-out;
-}
-
-.label-float input:focus + label,
-.label-float input:valid + label{
-  font-size: 13px;
-  margin-top: 0;
-  color: #4038a0
-}
-
-
 
 hr{
   margin-top: 10%;
@@ -98,4 +100,8 @@ p{
   padding: 10px;
   border-radius: 4px;
   display: none;
+}
+
+#footerIndex {
+  background-color: #171810;
 }

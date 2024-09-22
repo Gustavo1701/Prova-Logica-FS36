@@ -7,7 +7,7 @@ function Sair() {
   const userLogado = JSON.parse(localStorage.getItem("userLogado"));
 
   const logado = document.querySelector("#logado");
-  logado.innerHTML = `Olá ${userLogado.nome}`;
+  logado.innerHTML = `Olá, ` + ` ${userLogado.nome}`;
 
   
 }
