@@ -14,3 +14,15 @@
 #footerHome{
     background-color: #171810;
 }
+
+#containerNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#logado {
+  flex: 1; /* Isso permite que a div "logado" ocupe o espaço central */
+  text-align: center; /* Centraliza o conteúdo dentro da div */
+}
