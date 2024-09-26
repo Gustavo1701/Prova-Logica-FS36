@@ -58,7 +58,7 @@ senha.addEventListener('keyup', () => {
         validSenha = false
     } else if (senha.value.length >= 10) {
         labelSenha.setAttribute('style', 'color: red')
-        labelSenha.innerHTML = 'Senha *Insira no minimo 6 caracteres'
+        labelSenha.innerHTML = 'Senha *Insira no máximo 10 caracteres'
         senha.setAttribute('style', 'border-color: red')
         validSenha = false
     } else {
